@@ -1,3 +1,6 @@
+<h2>Для корректной работы сайта необходимо создать базу данных "materials_makeup" и импоптировать в неё файл "SQL_import/materials_makeup.sql".</h2>
+
+
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
