@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -14,7 +15,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'Sxn3iQDPBMopdxRdAWXgmjsWooh4Kvrj',
+            'cookieValidationKey' => 'FUhgzjWyMtClo9FqU7RtaxVteDmRgrh3',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -51,6 +52,16 @@ $config = [
             ],
         ],
         */
+        'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [],
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js'=>[]
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
