@@ -1,4 +1,4 @@
-<h2>Для корректной работы сайта необходимо создать базу данных "materials_makeup" и импоптировать в неё файл "SQL_import/materials_makeup.sql".</h2>
+<h2>Для корректной работы сайта необходимо создать базу данных "materials_makeup", импоптировать в неё файл "SQL_import/materials_makeup.sql" и настроить подключение к MySql в файле конфигурации "config/db.php".</h2>
 
 
 <p align="center">
