@@ -31,8 +31,11 @@ class DeleteController extends Controller
         $id = intval(Yii::$app->request->get('id'));
         if ($id > 0) {
             if ($model = Categories::findOne($id)) {
-                $model->delete();
+                $material_ids = Materials::find()->where(['category' => $id])->asArray()->select(['id'])->column();
+                MaterialTag::deleteAll(['material_id' => $material_ids]);
+                MaterialLink::deleteAll(['material_id' => $material_ids]);
                 Materials::deleteAll(['category' => $id]);
+                $model->delete();
             }
         }
         return $this->redirect(Url::toRoute(['list/category']));
